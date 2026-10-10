@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ricercar-discord-rich-presence"
+version = "0.2.1"
+description = "Discord Rich Presence bridge for the ricercar music player"
+requires-python = ">=3.10"
+dependencies = [
+    "dbus-next>=0.2.3",
+    "pypresence>=4.3.0",
+]
+
+[project.scripts]
+ricercar-discord-presence = "ricercar_discord_presence:main"
+
+[tool.setuptools]
+py-modules = ["ricercar_discord_presence"]
